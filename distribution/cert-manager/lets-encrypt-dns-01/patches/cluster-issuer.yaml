@@ -6,7 +6,7 @@ spec:
   selfSigned:
     $patch: delete
   acme:
-    email: info@dev.csgroup.space
+    email: info@51.222.45.24.nip.io
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: gateways-issuer-account-key

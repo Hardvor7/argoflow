@@ -74,8 +74,8 @@
             "clientAuthenticatorType": "client-secret",
             "secret": "",
             "redirectUris": [
-                "https://kubeflow.dev.csgroup.space",
-                "https://kubeflow.dev.csgroup.space/oauth2/callback"
+                "https://kubeflow.51.222.45.24.nip.io",
+                "https://kubeflow.51.222.45.24.nip.io/oauth2/callback"
             ],
             "webOrigins": []
         }

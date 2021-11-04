@@ -8,16 +8,16 @@ metadata:
     kubernetes.io/tls-acme: "true"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
-    nginx.ingress.kubernetes.io/server-alias: "*.rgw.dev.csgroup.space"
+    nginx.ingress.kubernetes.io/server-alias: "*.rgw.51.222.45.24.nip.io"
     nginx.ingress.kubernetes.io/server-snippet: |
       proxy_ssl_verify off;
 spec:
   tls:
    - hosts:
-     - rgw.dev.csgroup.space
+     - rgw.51.222.45.24.nip.io
      secretName: radosgw-ingressgateway-certs
   rules:
-  - host: rgw.dev.csgroup.space
+  - host: rgw.51.222.45.24.nip.io
     http:
       paths:
       - path: /

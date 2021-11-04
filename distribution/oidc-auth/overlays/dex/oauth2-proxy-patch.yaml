@@ -39,16 +39,16 @@ spec:
       - name: extraArgs.skip-provider-button
         value: "true"
       - name: extraArgs.cookie-domain
-        value: .dev.csgroup.space
+        value: .51.222.45.24.nip.io
       - name: extraArgs.whitelist-domain
-        value: .dev.csgroup.space
+        value: .51.222.45.24.nip.io
       - name: extraArgs.oidc-issuer-url
-        value: "https://auth.dev.csgroup.space"
+        value: "https://auth.51.222.45.24.nip.io"
       - name: extraArgs.login-url
-        value: "https://auth.dev.csgroup.space/auth"
+        value: "https://auth.51.222.45.24.nip.io/auth"
       - name: extraArgs.oidc-jwks-url
-        value: "https://auth.dev.csgroup.space/keys"
+        value: "https://auth.51.222.45.24.nip.io/keys"
       - name: extraArgs.redeem-url
-        value: "https://auth.dev.csgroup.space/token"
+        value: "https://auth.51.222.45.24.nip.io/token"
       - name: extraArgs.skip-oidc-discovery
         value: "true"

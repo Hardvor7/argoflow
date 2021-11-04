@@ -17,5 +17,5 @@ spec:
   - to:
     - operation:
         hosts:
-        - kubeflow.dev.csgroup.space
-        - serving.dev.csgroup.space
+        - kubeflow.51.222.45.24.nip.io
+        - serving.51.222.45.24.nip.io
