@@ -12,4 +12,13 @@ kind: ClusterIssuer
 metadata:
   name: gateways-issuer
 spec:
-  selfSigned: {}
+    acme:
+      email: robin.leclair@csgroup.eu
+      preferredChain: ""
+      privateKeySecretRef:
+        name: letsencrypt-prod
+      server: https://acme-v02.api.letsencrypt.org/directory
+      solvers:
+      - http01:
+          ingress:
+            class: istio
