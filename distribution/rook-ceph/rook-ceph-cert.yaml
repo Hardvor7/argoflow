@@ -8,6 +8,6 @@ spec:
   issuerRef:
     name: gateways-issuer
     kind: ClusterIssuer
-  commonName: <<__subdomain_ceph__>>.<<__domain__>>
+  commonName: rook-ceph.dev.csgroup.space
   dnsNames:
-    - <<__subdomain_ceph__>>.<<__domain__>>
+    - rook-ceph.dev.csgroup.space

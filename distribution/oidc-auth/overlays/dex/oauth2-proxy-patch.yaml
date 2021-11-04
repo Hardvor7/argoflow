@@ -39,16 +39,16 @@ spec:
       - name: extraArgs.skip-provider-button
         value: "true"
       - name: extraArgs.cookie-domain
-        value: .<<__domain__>>
+        value: .dev.csgroup.space
       - name: extraArgs.whitelist-domain
-        value: .<<__domain__>>
+        value: .dev.csgroup.space
       - name: extraArgs.oidc-issuer-url
-        value: "https://<<__subdomain_auth__>>.<<__domain__>>"
+        value: "https://auth.dev.csgroup.space"
       - name: extraArgs.login-url
-        value: "https://<<__subdomain_auth__>>.<<__domain__>>/auth"
+        value: "https://auth.dev.csgroup.space/auth"
       - name: extraArgs.oidc-jwks-url
-        value: "https://<<__subdomain_auth__>>.<<__domain__>>/keys"
+        value: "https://auth.dev.csgroup.space/keys"
       - name: extraArgs.redeem-url
-        value: "https://<<__subdomain_auth__>>.<<__domain__>>/token"
+        value: "https://auth.dev.csgroup.space/token"
       - name: extraArgs.skip-oidc-discovery
         value: "true"
