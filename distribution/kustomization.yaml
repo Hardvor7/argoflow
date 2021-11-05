@@ -8,8 +8,9 @@ resources:
 # - argocd-applications/nginx.yaml
 # - argocd-applications/nvidia-gpu-operator.yaml
 - argocd-applications/istio-operator.yaml
-- argocd-applications/istio.yaml    
+- argocd-applications/istio.yaml
 - argocd-applications/istio-resources.yaml
+- argocd-applications/istio-csr.yaml
 - argocd-applications/knative.yaml
 
 # Pick *one* of the following applications

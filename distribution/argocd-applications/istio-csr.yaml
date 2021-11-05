@@ -1,0 +1,40 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-csr
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://charts.jetstack.io'
+    targetRevision: 0.3.1
+    chart: cert-manager-istio-csr
+    helm:
+      parameters:
+      - name: app.certmanager.issuer.name
+        value: gateways-issuer
+      - name: app.certmanager.issuer.kind
+        value: ClusterIssuer
+      - name: app.tls.rootCAFile
+        value: /var/run/secrets/istio-csr/ca.pem
+      - name: volumeMounts[0].name
+        value: root-ca
+      - name: volumeMounts[0].mountPath
+        value: /var/run/secrets/istio-csr
+      - name: volumes[0].name
+        value: root-ca
+      - name: volumes[0].secret.secretName
+        value: letsencrypt-prod
+      - name: volumes[0].secret.items[0].key
+        value: tls.key
+      - name: volumes[0].secret.items[0].path
+        value: ca.pem
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: cert-manager
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

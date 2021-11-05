@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - https://github.com/jetstack/cert-manager/releases/download/v1.4.0/cert-manager.yaml
 - cluster-issuers.yaml
+# - istio-ca-secret.yaml
 
 images:
 - name: quay.io/jetstack/cert-manager-controller
