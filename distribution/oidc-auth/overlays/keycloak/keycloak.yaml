@@ -47,6 +47,10 @@ spec:
         value: "true"
       - name: metrics.serviceMonitor.namespace
         value: monitoring
+      - name: resources.requests.cpu
+        value: 50m
+      - name: postgresql.resources.requests.cpu
+        value: 50m
   destination:
     server: https://kubernetes.default.svc
     namespace: auth

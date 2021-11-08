@@ -662,7 +662,7 @@ spec:
           image: gcr.io/knative-releases/knative.dev/eventing/cmd/controller@sha256:b02cfc6d0858de1ae6d5d5acbe1ac2ed1c5411f2adcec417c2b113b3b3274e4a
           resources:
             requests:
-              cpu: 100m
+              cpu: 50m
               memory: 100Mi
           env:
             - name: SYSTEM_NAMESPACE
@@ -768,7 +768,7 @@ spec:
               protocol: TCP
           resources:
             requests:
-              cpu: 125m
+              cpu: 50m
               memory: 64Mi
             limits:
               cpu: 1000m
@@ -878,7 +878,7 @@ spec:
           resources:
             requests:
               # taken from serving.
-              cpu: 100m
+              cpu: 50m
               memory: 50Mi
             limits:
               # taken from serving.
