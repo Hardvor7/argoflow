@@ -24,16 +24,14 @@ data:
     # container image source available at https://github.com/pluralsh/kubeflow-notebooks
       image:
         # The container Image for the user's Jupyter Notebook
-        value: ghcr.io/pluralsh/kubeflow-notebooks-jupyter-scipy:v1.0.0
+        value: hfjcmwgl.gra5.container-registry.ovh.net/ai4geo/vreai4geo-cloud:kubeflow
         # The list of available standard container Images
         options:
+          - hfjcmwgl.gra5.container-registry.ovh.net/ai4geo/vreai4geo-cloud:kubeflow
+          - hfjcmwgl.gra5.container-registry.ovh.net/ai4geo/vreai4geo-cloud:latest
+          - hfjcmwgl.gra5.container-registry.ovh.net/vre/vreot-cloud:latest
+          - hfjcmwgl.gra5.container-registry.ovh.net/vre/vrebase-cloud:latest
           - ghcr.io/pluralsh/kubeflow-notebooks-jupyter-scipy:v1.0.0
-          - ghcr.io/pluralsh/kubeflow-notebooks-jupyter-pytorch-full:v1.0.0
-          - ghcr.io/pluralsh/kubeflow-notebooks-jupyter-pytorch-full-cuda:v1.0.0
-          - ghcr.io/pluralsh/kubeflow-notebooks-jupyter-tensorflow-full:v1.0.0
-          - ghcr.io/pluralsh/kubeflow-notebooks-jupyter-tensorflow-full-cuda:v1.0.0
-          - ghcr.io/pluralsh/kubeflow-notebooks-jupyter-go:v1.0.0
-          - ghcr.io/pluralsh/kubeflow-notebooks-jupyter-elixir:v1.0.0
       imageGroupOne:
         # The container Image for the user's Group One Server
         # The annotation `notebooks.kubeflow.org/http-rewrite-uri: /`
@@ -99,7 +97,7 @@ data:
             value: '5Gi'
           mountPath:
             # The Path that the Workspace Volume will be mounted
-            value: /home/jovyan
+            value: /home/ai4geo
           accessModes:
             # The Access Mode of the Workspace Volume
             # Supported values: 'ReadWriteOnce', 'ReadWriteMany', 'ReadOnlyMany'
