@@ -1,0 +1,10 @@
+apiVersion: v2
+name: daskhub
+description: Daskhub Chart
+type: application
+version: 2021.10.0
+appVersion: 2021.10.0
+dependencies:
+  - name: daskhub
+    version: 2021.10.0
+    repository: https://helm.dask.org/

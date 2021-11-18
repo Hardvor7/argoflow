@@ -1,0 +1,50 @@
+
+daskhub:
+  jupyterhub:
+    proxy:
+      secretToken: "9f2c4a17a75dc6530521cf13004ef99d71375f52d22e51795e2909a956da24f0"
+
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        nginx.ingress.kubernetes.io/ssl-redirect: "true"
+        nginx.ingress.kubernetes.io/proxy-body-size: 20m
+      hosts:
+        - jhub.p1.local
+      pathSuffix: ''
+      tls:
+        - hosts:
+            - jhub.p1.local
+          secretName: jhub.p1.local
+
+    hub:
+      networkPolicy:
+        enabled: false
+      config:
+        JupyterHub:
+          admin_access: true
+          authenticator_class: dummy
+      services:
+        dask-gateway:
+          apiToken: "7bad765b37651157a101ad5368b7f8f933d3b52f92a9faff210c46f777318ac3"
+    proxy:
+      chp:
+        networkPolicy:
+          enabled: false
+    singleuser:
+      networkPolicy:
+        enabled: false
+      defaultUrl: "/lab"
+      storage:
+        capacity: 1Gi
+  dask-gateway:
+    gateway:
+      auth:
+        jupyterhub:
+          apiToken: "7bad765b37651157a101ad5368b7f8f933d3b52f92a9faff210c46f777318ac3"
+      extraConfig: |
+        # https://gateway.dask.org/api-server.html#
+        c.KubeClusterConfig.idle_timeout = 600
+        c.ClusterConfig.idle_timeout = 3600

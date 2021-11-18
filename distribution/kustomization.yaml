@@ -66,3 +66,6 @@ resources:
 # - argocd-applications/mlflow.yaml
 # - argocd-applications/experimental-pvcviewer-controller.yaml
 # - argocd-applications/experimental-volumes-web-app.yaml
+
+## Daskhub
+# - argocd-applications/daskhub.yaml
